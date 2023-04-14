@@ -1,0 +1,33 @@
+.footer {
+  @apply text-white font-interReg;
+
+  .impInfo {
+    @apply bg-[#484848] flex flex-col items-center py-[5px] rounded-t-[50px];
+
+    &__header {
+      h3 {
+        @apply text-2xl;
+      }
+    }
+
+    &__contact {
+      @apply flex mt-[20px] mb-[20px];
+
+      &__item {
+        @apply mr-[200px] flex flex-col items-center;
+
+        img {
+          @apply w-[40px] h-[40px] mb-[5px];
+        }
+
+        &:last-child {
+          @apply mr-0;
+        }
+      }
+    }
+  }
+
+  .reserved {
+    @apply bg-[#232323] flex justify-center py-[5px];
+  }
+}

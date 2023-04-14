@@ -1,0 +1,53 @@
+$headerMargin: 30px;
+
+.header {
+  @apply w-[1140px];
+  @apply fixed shadow-header flex items-center justify-between;
+  @apply left-1/2 transform -translate-x-1/2 top-[20px] px-[32px] py-[12px];
+  @apply bg-white;
+  @apply z-50;
+
+  &__item {
+    @apply flex items-center;
+  }
+
+  .logo {
+    &R {
+      @apply mr-[#{$headerMargin}];
+
+      img {
+        @apply w-[46px] h-[40px];
+        //image-rendering: pixelated;
+      }
+    }
+
+    &L {
+      @apply ml-[#{$headerMargin}];
+    }
+  }
+
+  .delimiter {
+    @apply w-[1px] h-[30px] bg-black;
+  }
+
+  .services {
+    @apply flex;
+
+    &__name {
+      @apply flex;
+
+      span {
+        @apply mr-[34px] last-of-type:mr-[#{$headerMargin}];
+      }
+    }
+  }
+
+  .signIn {
+    @apply ml-[#{$headerMargin}];
+
+    &__button {
+      @apply flex items-center justify-center rounded-[15px] px-[14px] py-[3px] bg-indigo-600 text-amber-50 hover:bg-indigo-400;
+    }
+  }
+}
+
