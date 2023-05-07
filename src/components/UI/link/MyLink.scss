@@ -1,0 +1,17 @@
+.link {
+    img {
+      @apply w-[50px] h-auto mb-4 p-2;
+    }
+
+    &:first-of-type img {
+      @apply w-[65px] h-auto mb-6;
+    }
+
+    &:hover:not(:first-of-type) img {
+      @apply bg-[#EDECFC] bg-[20px] rounded-[10px];
+    }
+
+    &:last-of-type {
+      @apply mt-auto;
+    }
+}

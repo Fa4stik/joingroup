@@ -1,0 +1,51 @@
+body {
+  @apply p-0 m-0;
+}
+
+#notfound {
+  @apply relative h-screen bg-black;
+
+  .notfound {
+    @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[767px] w-full leading-[1.4] text-center;
+
+    &-404 {
+      @apply relative h-[180px] mb-[20px] z-[-1];
+
+      h1 {
+        @apply absolute text-[224px] text-center uppercase font-[900];
+        @apply left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-0 mb-0 ml-[-12px] tracking-[-20px];
+        font-family: montserrat, sans-serif;
+        text-shadow: -1px -1px 0 #8400ff, 1px 1px 0 #ff005a;
+      }
+
+      h2 {
+        @apply absolute left-0 right-0 top-[110px] text-[42px] font-[700] text-white uppercase tracking-[13px] m-0;
+        text-shadow: 0 2px 0 #8400ff;
+        font-family: montserrat, sans-serif;
+      }
+    }
+
+    a {
+      @apply inline-block uppercase text-[#ff005a] decoration-0 bg-transparent px-[40px] py-[10px] text-[14px] font-[700];
+      font-family: montserrat, sans-serif;
+      border: 2px solid;
+      transition: .2s all;
+
+      &:hover {
+        @apply text-[#8400ff]
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .notfound .notfound-404 h2 {
+    @apply text-[24px];
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .notfound .notfound-404 h1 {
+    @apply text-[182px];
+  }
+}

@@ -1,0 +1,37 @@
+.compChat {
+  @apply flex ml-[80px];
+
+  .chat {
+    @apply flex font-interReg w-screen;
+
+    &__column {
+      @apply w-[420px] h-screen;
+      border-right: 3px solid #DDE6FF;
+
+      &__mainUserInfo {
+        @apply flex items-center mt-5 mb-5 pl-8;
+
+        img {
+          @apply h-[50px] mr-5;
+        }
+
+        p {
+          @apply text-[20px];
+        }
+      }
+
+      &__inputSearch {
+        @apply mb-4 pl-8;
+      }
+    }
+
+    &__dialog {
+      @apply bg-[#f1f5f9] flex flex-col justify-center items-center text-2xl -mt-20 text-center;
+      width: calc(100% - 340px - 80px);
+    }
+  }
+}
+
+.myHeader {
+  @apply fixed top-0 left-0 h-screen w-[80px] bg-white;
+}

@@ -1,0 +1,15 @@
+.searchInput {
+  input {
+    @apply bg-[#F2F6FA] px-4 py-1;
+    border-radius: 20px;
+    border: solid 1px gray;
+
+    &::placeholder {
+      @apply text-gray-400;
+    }
+  }
+
+  img {
+    @apply h-[20px] translate-x-[245px] -translate-y-[28px];
+  }
+}

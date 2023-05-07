@@ -1,0 +1,18 @@
+$input-border-bottom: 3px;
+$input-padding-y: 50px;
+
+.myInput {
+  @apply border-b-[#{$input-border-bottom}] border-b-[#C6C6C6] pb-[10px] w-full text-black;
+  @apply bg-no-repeat font-interReg mb-[40px] pr-[35px];
+  display: inline;
+  background-position: right top;
+  background-size: 30px 30px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    @apply font-interReg;
+  }
+}

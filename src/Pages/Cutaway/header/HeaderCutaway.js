@@ -2,17 +2,26 @@ import React, {useState, useRef} from "react"
 import hStyless from "./Header.module.scss"
 import logo from "./img/JoinGroupLogo.png";
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import {useNavigate} from "react-router-dom";
 
-function Header() {
+function HeaderCutaway() {
+    const navigate = useNavigate();
+    const handlerButton = (e) => {
+        e.preventDefault();
+        navigate('/registration');
+    }
+
     return (
         <div className={hStyless.header}>
             <div className={hStyless.header__item}>
                 <div className={hStyless.logoR}>
-                    <img src={logo} alt="Logo"/>
+                    <a href="#description">
+                        <img src={logo} alt="Logo"/>
+                    </a>
                 </div>
                 <div className={hStyless.delimiter}></div>
                 <div className={hStyless.logoL}>
-                    JoinGroup
+                    <a href="#description">JoinGroup</a>
                 </div>
             </div>
             <div className={hStyless.services}>
@@ -24,11 +33,11 @@ function Header() {
                 </div>
                 <div className={hStyless.delimiter}></div>
                 <div className={hStyless.signIn}>
-                    <button className={hStyless.signIn__button}>Авторизация</button>
+                    <button className={hStyless.signIn__button} onClick={handlerButton}>Авторизация</button>
                 </div>
             </div>
         </div>
     );
 }
 
-export default Header;
+export default HeaderCutaway;

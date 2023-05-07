@@ -1,0 +1,61 @@
+.primary {
+  @apply flex font-interReg relative h-full ml-[80px];
+
+  &__info {
+    @apply w-full bg-white;
+    @apply overflow-y-scroll;
+    max-height: 100vh;
+
+    .cover {
+      @apply w-full h-[200px] bg-[#E9E9E9] flex justify-center items-center;
+
+      &__button {
+        @apply w-[90px] h-full;
+      }
+    }
+
+    .statistic {
+      @apply flex justify-around h-[100px] items-center;
+
+      &__avatar {
+        @apply translate-y-[-50px] w-[100px] h-[100px] bg-[#E9E9E9];
+        @apply border-[5px] border-solid border-white;
+        @apply flex justify-center items-center;
+        border-radius: 100px;
+
+        &__circle {
+          @apply w-[60px];
+        }
+      }
+
+      h3 {
+        @apply font-interBold;
+      }
+    }
+
+    .group {
+      @apply bg-[#f1f5f9] flex justify-around pt-5;
+
+      &__settings {
+        @apply w-[360px] ml-[70px] mr-[35px];
+
+        h3 {
+          @apply text-center;
+        }
+
+        input {
+          @apply bg-[#f2f6fa] border-[1px] border-solid border-black mb-3 px-2;
+          border-radius: 20px;
+        }
+      }
+
+      &__post {
+        @apply w-full ml-[35px] mr-[70px] flex flex-col items-center max-w-2xl;
+      }
+    }
+  }
+}
+
+.myHeader {
+  @apply fixed top-0 left-0 h-screen w-[80px] bg-white;
+}

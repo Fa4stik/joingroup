@@ -1,0 +1,9 @@
+.tag {
+  @apply bg-[#F2F6FA] mr-2;
+  @apply px-1;
+  border-radius: 4px;
+
+  &:last-of-type {
+    @apply mr-0;
+  }
+}

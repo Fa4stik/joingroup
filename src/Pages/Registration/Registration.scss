@@ -1,0 +1,45 @@
+$input-border-bottom: 3px;
+$text-color-link: #5280FF;
+
+.registr {
+  @apply min-h-screen bg-no-repeat flex items-center justify-center;
+  background-image: url("../../images/img/Registration/BG.svg");
+  background-position-y: -50px;
+
+  .block {
+    @apply w-[480px] bg-white shadow-button px-[40px] py-[30px];
+    @apply flex flex-col justify-center items-center;
+    @apply font-interReg;
+
+    h1 {
+      @apply font-interBold text-3xl;
+    }
+
+    h2 {
+      @apply font-interReg text-2xl mb-12;
+    }
+
+    a {
+      @apply text-[#{$text-color-link}];
+    }
+
+    &__passFunc {
+      @apply w-full flex justify-between;
+      &__remember {
+        @apply flex items-center;
+
+        input {
+          @apply w-[15px] h-[15px]
+        }
+
+        p {
+          @apply ml-2;
+        }
+      }
+    }
+
+    &__reg {
+
+    }
+  }
+}

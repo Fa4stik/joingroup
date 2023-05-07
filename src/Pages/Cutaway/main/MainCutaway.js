@@ -1,11 +1,11 @@
 import React from "react"
-import mStyless from "./Main.module.scss"
+import mStyless from "./MainCutaway.module.scss"
 import { messengares, services } from "./images";
 
-function Main() {
+function MainCutaway() {
     return (
         <div className={mStyless.main}>
-            <div className={mStyless.description}>
+            <div id="description" className={mStyless.description}>
                 <div className={mStyless.description__text}>
                     <h1>Управляй мессенджерами в один клик</h1>
                     <p>Будь более гибким и управляй своим бизнесом в мессенджерах из единого центра. Вам больше не придётся проверять каждый мессенджер на сообщения от клиентов, достаточно только авторизоваться в нашем сервисе</p>
@@ -141,4 +141,4 @@ function Main() {
     );
 }
 
-export default Main;
+export default MainCutaway;

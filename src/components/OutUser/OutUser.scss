@@ -1,0 +1,27 @@
+.chat__column__outUsers {
+  @apply flex items-start py-3 pl-8;
+  border-top: 3px solid #DDE6FF;
+
+  &__info {
+    @apply flex items-center mr-12;
+
+    &__text {
+      p {
+        @apply text-[#828282];
+      }
+    }
+  }
+
+  img {
+    @apply h-[55px] mr-5;
+    border-radius: 55px;
+  }
+
+  &:hover {
+    @apply bg-gray-100;
+  }
+
+  &:last-of-type {
+    border-bottom: 3px solid #DDE6FF;
+  }
+}

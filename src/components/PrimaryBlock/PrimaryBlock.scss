@@ -1,0 +1,13 @@
+.primaryBlock {
+  @apply px-[30px] py-[30px];
+  @apply w-full bg-white flex flex-col mb-5;
+  border-radius: 50px;
+
+  h3 {
+    @apply font-interBold text-2xl;
+  }
+
+  h4 {
+    @apply text-[20px] mb-2 ml-7;
+  }
+}

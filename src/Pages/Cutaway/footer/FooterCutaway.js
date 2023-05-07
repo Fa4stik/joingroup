@@ -1,8 +1,8 @@
 import React from "react"
-import fStyless from "./Footer.module.scss"
+import fStyless from "./FooterCutaway.module.scss"
 import { icon } from "./images"
 
-function Footer() {
+function FooterCutaway() {
     return (
         <div id="footer" className={fStyless.footer}>
             <div className={fStyless.impInfo}>
@@ -31,4 +31,4 @@ function Footer() {
     );
 }
 
-export default Footer;
+export default FooterCutaway;

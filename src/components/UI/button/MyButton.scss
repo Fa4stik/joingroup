@@ -1,0 +1,9 @@
+.myButton {
+  @apply w-full bg-[#5280FF] py-[10px] my-[40px];
+  @apply font-interBold text-white;
+
+  &:hover {
+    @apply bg-[#648DFF];
+  }
+
+}

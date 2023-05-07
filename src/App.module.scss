@@ -1,3 +1,56 @@
-.mainElement {
-  @apply flex flex-col min-h-screen items-center;
+.App {
+  /* Box sizing rules */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* Remove default padding and margin */
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Remove list styles (bullet points) */
+  ul,
+  ol {
+    list-style: none;
+  }
+
+  /* Remove default hyperlink styling */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* Remove default text styles */
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.5;
+  }
+
+  /* Remove default form styles */
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+    border: transparent;
+  }
 }

@@ -1,22 +1,30 @@
 import "./index.css";
-import styles from "./App.module.scss";
-
-import Header from "./components/header/Header"
-import Main from "./components/main/Main"
-import Footer from "./components/footer/Footer"
-import {dividerClasses} from "@mui/material";
+import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
+import Cutaway from "./Pages/Cutaway/Cutaway";
+import Error404 from "./Pages/Error404/Error404";
+import {privateRouters} from "./router/router";
+import {useState} from "react";
+import {MyHeaderContext} from './context/index';
 
 function App() {
+    const [activeLink, setActiveLink] = useState('primary');
 
     return (
         <div className="App">
-            <div className={styles.mainElement}>
-                <Header/>
-                <Main/>
-            </div>
-            <div>
-                <Footer/>
-            </div>
+            <MyHeaderContext.Provider
+                value={{
+                    activeLink,
+                    setActiveLink
+            }}>
+                <BrowserRouter>
+                    <Routes>
+                        {privateRouters.map(route =>
+                            <Route key={route.path} path={route.path} element={route.component}/>
+                        )}
+                        <Route path="*" element={<Error404/>}/>
+                    </Routes>
+                </BrowserRouter>
+            </MyHeaderContext.Provider>
         </div>
     );
 }
