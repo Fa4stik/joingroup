@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Стартап JoinGroup
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+JoinGroup - это уникальный сервис, который позволяет управлять группами во всех популярных мессенджерах в одном месте.
 
-## Available Scripts
+## Описание
 
-In the project directory, you can run:
+Сервис JoinGroup позволяет пользователям управлять группами в трех популярных мессенджерах - ВКонтакте, Telegram и Instagram - в едином интерфейсе. Благодаря JoinGroup, пользователи могут отправлять сообщения в несколько групп одновременно и получать уведомления о новых сообщениях в одном месте.
 
-### `npm start`
+Кроме того, в сервисе есть возможность управления персоналом: общий чат с общением и аналитика групп, которая позволяет узнать сколько участников, какой приток и другие показатели.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Функциональность
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Управление группами в трех популярных мессенджерах (ВКонтакте, Telegram, Instagram).
+- Возможность отправлять сообщения в несколько групп одновременно.
+- Управление персоналом: общий чат с общением и аналитика групп.
+- Простой и удобный интерфейс.
 
-### `npm test`
+## Дизайн
+С дизайном вы можете ознакомиться по ссылке ниже:
+https://www.figma.com/file/R30PxgEGXMvX0KeGZDBHDM/JoinGroup?node-id=0%3A1&t=qryV5LXIixx1S5mh-1
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Установка и запуск
 
-### `npm run build`
+Сервис JoinGroup доступен для использования на веб-сайте https:// (в разработке). Для начала использования сервиса необходимо создать аккаунт и подключить нужные группы мессенджеров.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Разработчики
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+JoinGroup разрабатывается пользователем @Fa4stik. Связаться с разработчиком можно по электронной почте stepan.sharifulin@mail.ru.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Лицензия
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Не трубется.
