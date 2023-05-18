@@ -1,3 +1,99 @@
-.settings {
-  @apply flex;
+.settingsDisplay {
+  @apply flex font-interReg;
+
+  .settings {
+    @apply ml-[140px];
+
+    &__avatar {
+      @apply flex items-center my-10;
+
+      img {
+        @apply h-[60px] w-[60px];
+        border-radius: 60px;
+        object-fit: cover;
+      }
+
+      p {
+        @apply text-2xl w-[450px];
+      }
+
+      &__razdel {
+        @apply w-[2px] h-[60px] mx-5;
+        border-right: 3px solid #DDE6FF;
+      }
+
+      button {
+        @apply ml-auto text-white text-2xl py-1 px-4 bg-indigo-500;
+        border-radius: 20px;
+
+        &:last-of-type {
+          @apply ml-4;
+        }
+      }
+
+      .hideButton {
+        @apply bg-transparent text-black h-[60px] w-[60px] p-0;
+      }
+    }
+
+    h2 {
+      @apply font-interBold text-3xl my-2;
+    }
+
+    &__group {
+      @apply flex flex-wrap w-full;
+
+      p {
+        @apply ml-4;
+      }
+
+      &__private {
+        @apply w-[800px];
+
+        &__field {
+          @apply flex flex-wrap;
+
+          &__item {
+            @apply flex flex-col mr-24 mb-3 ml-2;
+
+            .mailConfirmYes {
+              @apply text-green-400;
+            }
+
+            .mailConfirmNo {
+              @apply text-red-400;
+            }
+          }
+        }
+      }
+
+      &__subscribe {
+
+        &__field {
+
+          &__item {
+            @apply mb-3 ml-2;
+          }
+        }
+      }
+    }
+
+    &__token {
+
+      p {
+        @apply ml-4;
+      }
+
+      &__field {
+
+        &__item {
+          @apply mb-3 ml-2;
+        }
+      }
+    }
+  }
+}
+
+.myHeader {
+  @apply fixed top-0 left-0 h-screen w-[80px] bg-white;
 }

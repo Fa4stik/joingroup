@@ -7,10 +7,19 @@
     max-height: 100vh;
 
     .cover {
-      @apply w-full h-[200px] bg-[#E9E9E9] flex justify-center items-center;
+      @apply w-full h-[200px] bg-[#E9E9E9];
 
       &__button {
-        @apply w-[90px] h-full;
+        @apply w-full h-full flex justify-center items-center;
+
+        &__image {
+          @apply w-full h-full;
+          object-fit: cover;
+        }
+
+        &__nanImage {
+          @apply w-[90px];
+        }
       }
     }
 
@@ -21,10 +30,21 @@
         @apply translate-y-[-50px] w-[100px] h-[100px] bg-[#E9E9E9];
         @apply border-[5px] border-solid border-white;
         @apply flex justify-center items-center;
-        border-radius: 100px;
+        border-radius: 50%;
 
         &__circle {
-          @apply w-[60px];
+          @apply w-full h-full flex justify-center items-center;
+          border-radius: 50%;
+          overflow: hidden;
+
+          &__nanImage {
+            @apply w-[60px];
+          }
+
+          &__image {
+            @apply w-full h-full;
+            object-fit: cover;
+          }
         }
       }
 
@@ -45,6 +65,11 @@
 
         input {
           @apply bg-[#f2f6fa] border-[1px] border-solid border-black mb-3 px-2;
+          border-radius: 20px;
+        }
+
+        &__save {
+          @apply text-white text-2xl py-1 px-4 bg-indigo-500 w-full;
           border-radius: 20px;
         }
       }

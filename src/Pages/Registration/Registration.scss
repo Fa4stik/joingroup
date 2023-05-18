@@ -41,5 +41,16 @@ $text-color-link: #5280FF;
     &__reg {
 
     }
+
+    &__passwordBtn {
+      @apply h-[30px] w-[30px] translate-x-[185px] -translate-y-[79px];
+      @apply -mb-5;
+    }
+
+    &__notCorrect {
+      p {
+        @apply text-red-500;
+      }
+    }
   }
 }

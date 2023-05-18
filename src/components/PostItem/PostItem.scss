@@ -1,12 +1,12 @@
 .group__post__item {
-  @apply bg-white px-[30px] py-[30px] mb-8;
+  @apply bg-white px-[30px] py-[30px] mb-8 w-full;
   border-radius: 50px;
 
   &__header {
     @apply flex mb-4;
 
     img {
-      @apply w-[50px] mr-3;
+      @apply w-[50px] h-[50px] mr-3;
     }
 
     &__info {
@@ -28,6 +28,11 @@
 
   &__photo {
     @apply mb-4 -mx-[30px];
+
+    img {
+      @apply h-[350px] w-full;
+      object-fit: cover;
+    }
   }
 
   &__statistic {

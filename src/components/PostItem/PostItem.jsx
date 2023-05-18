@@ -3,14 +3,14 @@ import './PostItem.scss';
 import {primary} from "../../images/images";
 import MyTag from "../UI/tag/MyTag";
 
-const PostItem = (props) => {
+const PostItem = ({post, ...props}) => {
     return (
         <div className="group__post__item">
             <div className="group__post__item__header">
                 <img src={primary.avatar} alt="Avatar"/>
                 <div className="group__post__item__header__info">
                     <span>Имя Фамилия</span>
-                    <p>3 минуты назад</p>
+                    <p>{post.publication}</p>
                 </div>
                 <div className="group__post__item__header__mess">
                     <MyTag>VK</MyTag>
@@ -18,10 +18,16 @@ const PostItem = (props) => {
                     <MyTag>TG</MyTag>
                 </div>
             </div>
-            <div className="group__post__item__desc">{props.post.body}</div>
-            <div className="group__post__item__photo">
-                <img src={props.post.img} alt="Image"/>
+            <div className="group__post__item__desc">
+                <p>{post.body}</p>
             </div>
+            {post.img ?
+                <div className="group__post__item__photo">
+                    <img src={post.img} alt="Image"/>
+                </div>
+                :
+                null
+            }
             <div className="group__post__item__statistic">
                 <img src={primary.like} alt="Like"/>
                 <p>1050</p>

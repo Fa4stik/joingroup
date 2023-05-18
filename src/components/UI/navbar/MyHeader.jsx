@@ -16,7 +16,6 @@ const MyHeader = ({className}) => {
     };
 
     useLayoutEffect(() => {
-        console.log('check')
         navigate(`/${activeLink}`);
     }, [navigate, activeLink]);
 

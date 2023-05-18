@@ -1,0 +1,41 @@
+.loading {
+  @apply h-screen w-screen flex justify-center items-center bg-gray-100;
+  @mixin point-animation($color) {
+    width: 10px;
+    height: 10px;
+    background-color: $color;
+    border-radius: 50%;
+    opacity: 1;
+    animation: point-scale $animation-duration $animation-delay infinite alternate;
+  }
+
+  $animation-duration: 1s;
+  $animation-delay: 0.5s;
+
+  .point-animation {
+    @include point-animation(#4B0082);
+  }
+
+  .point-animation-2 {
+    @include point-animation(#9370DB);
+  }
+
+  .point-animation-3 {
+    @include point-animation(#E6E6FA);
+  }
+
+  @keyframes point-scale {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(2);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}

@@ -2,16 +2,14 @@ import React, { useState } from 'react';
 import './SearchInput.scss';
 import { userChat } from '../../../images/images';
 
-const SearchInput = () => {
-    const [valueInpt, setValueInpt] = useState('');
-
+const SearchInput = ({placeholder, width, ...props}) => {
     return (
         <div className="searchInput">
             <input
-                value={valueInpt}
-                onChange={(e) => setValueInpt(e.target.value)}
+                {...props}
                 type="text"
-                placeholder="Найдите новый чат"
+                placeholder={placeholder}
+                style={{width: width}}
             />
         </div>
     );

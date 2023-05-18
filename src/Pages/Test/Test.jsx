@@ -1,70 +1,36 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import './Test.scss';
-import {
-    Chart as ChartJS,
-    BarElement,
-    CategoryScale,
-    LinearScale,
-    Tooltip,
-    Legend
-} from "chart.js";
 
-import { Bar } from "react-chartjs-2";
+const MyComponent = () => {
+    const handleDownload = () => {
+        const urls = [
+            'http://www.basketballassotion.space/Files/Pictures/1.jpg',
+            'http://www.basketballassotion.space/Files/Pictures/2.jpg'
+        ];
 
-ChartJS.register(
-    BarElement,
-    CategoryScale,
-    LinearScale,
-    Tooltip,
-    Legend
-)
+        urls.forEach((url, index) => {
+            fetch(url)
+                .then(response => response.blob())
+                .then(blob => {
+                    const imageUrl = URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.href = imageUrl;
+                    link.download = `image_${index+1}.jpg`; // File name for download
 
-const CursorFollower = () => {
-    const data = {
-        labels: ["ПН", 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС'],
-        datasets: [
-            {
-                data: [3, 6, 9, 4, 9, 1, 10],
-                backgroundColor: '#2C8AFF',
-            },
-        ]
-    }
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
 
-    const options = {
-        plugins: {
-            legend: {
-                display: false, // disable legend labels
-            },
-            tooltip: {
-                callbacks: {
-                    label: (tooltipItem) => {
-                        const dayOfWeek = tooltipItem.label;
-                        const count = tooltipItem.parsed.y;
-                        switch (dayOfWeek) {
-                            case 'ПН':
-                                return `Monday: ${count}`;
-                            case 'ВТ':
-                                return `Tuesday: ${count}`;
-                            // add cases for other days of the week
-                            default:
-                                return '';
-                        }
-                    },
-                },
-            },
-        },
-    }
+                    URL.revokeObjectURL(imageUrl);
+                });
+        });
+    };
 
     return (
-        <div>
-            <Bar
-                data={data}
-                options={options}
-            >
-
-            </Bar>
+        <div className="check">
+            <button onClick={handleDownload}>Скачать изображение</button>
         </div>
     );
-};
+}
 
-export default CursorFollower;
+export default MyComponent;

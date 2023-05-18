@@ -15,5 +15,18 @@
 //}
 
 .check {
-  @apply w-[100%] bg-red-400 text-center;
+  @apply w-screen h-screen;
+  @apply flex flex-wrap;
+
+  &__item {
+    @apply w-[200px] h-[200px] bg-red-400 m-5;
+  }
+
+  input {
+    border: solid 2px black;
+  }
+
+  button {
+    border: solid 2px black;
+  }
 }

@@ -19,6 +19,8 @@ import messGray from './img/UserChat/MessageGray.png';
 
 import comp_01 from './img/CompanyChat/comp_01.jpg';
 
+import usAvatar from './img/Settings/UserAvatar.png';
+
 export const register = {
     mail,
     pass,
@@ -48,4 +50,8 @@ export const compChat = {
     usAvatarMain,
     messGray,
     comp_01,
+}
+
+export const settings = {
+    usAvatar,
 }

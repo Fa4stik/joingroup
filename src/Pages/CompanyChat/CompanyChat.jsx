@@ -4,8 +4,11 @@ import './CompanyChat.scss';
 import {compChat} from "../../images/images";
 import SearchInput from "../../components/UI/SearchInput/SearchInput";
 import OutUser from "../../components/OutUser/OutUser";
+import {useAuthRedirect} from "../../hooks/useAuthRedirect";
 
 const CompanyChat = () => {
+    useAuthRedirect();
+
     return (
         <div className="compChat">
             <MyHeader className="myHeader"/>
@@ -16,8 +19,7 @@ const CompanyChat = () => {
                         <p>Имя Фамилия</p>
                     </div>
                     <div className="chat__column__inputSearch">
-                        {/*<input type="text" alt="Search" placeholder="text for search"/>*/}
-                        <SearchInput/>
+                        <SearchInput placeholder="Введите текст для поиска"/>
                     </div>
                     <OutUser
                         image={compChat.comp_01}

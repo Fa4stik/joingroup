@@ -1,3 +1,19 @@
 .analysis {
-  @apply flex;
+  @apply flex ml-[80px];
+
+  .graph {
+    @apply w-full h-full;
+
+    &__dialog {
+      @apply h-[300px];
+    }
+
+    &__post {
+      @apply h-[300px];
+    }
+  }
+}
+
+.myHeader {
+  @apply fixed top-0 left-0 h-screen w-[80px] bg-white;
 }

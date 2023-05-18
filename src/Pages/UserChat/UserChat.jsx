@@ -17,8 +17,7 @@ const UserChat = () => {
                         <p>Имя Фамилия</p>
                     </div>
                     <div className="chat__column__inputSearch">
-                        {/*<input type="text" alt="Search" placeholder="text for search"/>*/}
-                        <SearchInput/>
+                        <SearchInput placeholder="Введите текст для поиска"/>
                     </div>
                     <OutUser
                         image={userChat.user_01}
