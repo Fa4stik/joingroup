@@ -1,3 +1,4 @@
+import React from 'react';
 import Cutaway from "../Pages/Cutaway/Cutaway";
 import Registration from "../Pages/Registration/Registration";
 import Primary from "../Pages/Primary/Primary";
