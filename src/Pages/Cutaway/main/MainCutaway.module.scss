@@ -1,28 +1,28 @@
 $generalIndentBLock: 60px;
 $indentFromHeader: 40px;
 .h2-styles {
-  @apply font-interReg text-5xl leading-[66px] mb-[#{$indentFromHeader}] w-[670px];
+  @apply font-interReg leading-[66px] mb-[#{$indentFromHeader}] w-[670px] text-5xl;
 }
 
 .main {
-  @apply flex flex-col flex-grow mt-32 w-[1140px];
+  @apply flex flex-col flex-grow mt-32 w-[1140px] mt-32;
   @apply z-0;
 
   .description {
-    @apply mt-[40px];
+    @apply mt-[40px] flex flex-col;
 
     &__text {
       $withFromTextBlock: 582px;
 
       h1 {
-        @apply font-interReg text-7xl leading-[86px] w-[#{$withFromTextBlock}] mb-[71px];
+        @apply font-interReg leading-[86px] w-[#{$withFromTextBlock}] mb-[71px] text-7xl;
       }
 
       p {
-        @apply font-interReg text-2xl leading-[36px] w-[#{$withFromTextBlock}];
+        @apply font-interReg leading-[36px] w-[#{$withFromTextBlock}] text-2xl;
       }
 
-      @apply mb-[80px]
+      @apply mb-[80px] flex-col;
     }
 
     &__button {
@@ -36,7 +36,7 @@ $indentFromHeader: 40px;
   }
 
   .services {
-    @apply mt-[#{$generalIndentBLock}];
+    @apply mt-[#{$generalIndentBLock}] flex-col;
 
     &__description {
       h2 {
@@ -48,12 +48,12 @@ $indentFromHeader: 40px;
       @apply flex justify-between;
 
       &__item {
-        @apply w-[334px] h-[463px];
+        @apply w-[334px] h-[463px] flex-col;
         @apply flex flex-col items-center justify-around rounded-[20px] shadow-button;
         @apply text-center;
 
         h4 {
-          @apply font-interReg text-3xl;
+          @apply font-interReg text-3xl flex-col;
         }
 
         p {
@@ -65,18 +65,18 @@ $indentFromHeader: 40px;
         }
 
         &:nth-child(2) {
-          @apply bg-white text-[#0064FF];
+          @apply text-[#0064FF] bg-white;
         }
 
         &:nth-child(3) {
-          @apply bg-[#2C2C2C] text-[#FFC86E];
+          @apply bg-[#2C2C2C] text-[#FFC86E] flex-col;
         }
       }
     }
   }
 
   .importantFunc {
-    @apply mt-[#{$generalIndentBLock}];
+    @apply mt-[#{$generalIndentBLock}] flex-col;
 
     &__header {
       h2 {
@@ -88,17 +88,17 @@ $indentFromHeader: 40px;
       @apply flex flex-col;
 
       &__row {
-        @apply flex justify-between mb-[40px];
+        @apply justify-between mb-[40px] flex;
 
         &__item {
-          @apply w-[310px];
+          @apply w-[310px] flex-col;
 
           h3 {
-            @apply font-interBold text-2xl mb-[15px];
+            @apply font-interBold mb-[15px] text-2xl;
           }
 
           p {
-            @apply font-interReg text-[18px];
+            @apply text-[18px] font-interReg;
           }
         }
       }
@@ -106,7 +106,7 @@ $indentFromHeader: 40px;
   }
 
   .price {
-    @apply mt-[#{$generalIndentBLock}] mb-[100px];
+    @apply mt-[#{$generalIndentBLock}] mb-[100px] flex-col;
 
     &__header {
       @apply h2-styles;

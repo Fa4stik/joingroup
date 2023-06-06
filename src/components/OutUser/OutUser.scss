@@ -7,7 +7,7 @@
 
     &__text {
       p {
-        @apply text-[#828282];
+        @apply text-[#828282] flex-col;
       }
     }
   }

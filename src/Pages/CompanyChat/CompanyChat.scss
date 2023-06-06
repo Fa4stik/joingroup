@@ -1,5 +1,5 @@
 .compChat {
-  @apply flex ml-[80px];
+  @apply ml-[80px] flex;
 
   .chat {
     @apply flex font-interReg w-screen;
@@ -16,7 +16,7 @@
         }
 
         p {
-          @apply text-[20px];
+          @apply text-[20px] flex flex-col;
         }
       }
 

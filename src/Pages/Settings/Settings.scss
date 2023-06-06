@@ -2,19 +2,19 @@
   @apply flex font-interReg;
 
   .settings {
-    @apply ml-[140px];
+    @apply ml-[140px] flex-col;
 
     &__avatar {
       @apply flex items-center my-10;
 
       img {
-        @apply h-[60px] w-[60px];
+        @apply h-[60px] w-[60px] flex-col;
         border-radius: 60px;
         object-fit: cover;
       }
 
       p {
-        @apply text-2xl w-[450px];
+        @apply w-[450px] text-2xl;
       }
 
       &__razdel {
@@ -48,7 +48,7 @@
       }
 
       &__private {
-        @apply w-[800px];
+        @apply w-[800px] flex-col;
 
         &__field {
           @apply flex flex-wrap;

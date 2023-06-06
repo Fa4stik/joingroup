@@ -2,7 +2,7 @@
   @apply text-white font-interReg;
 
   .impInfo {
-    @apply bg-[#484848] flex flex-col items-center py-[5px] rounded-t-[50px];
+    @apply bg-[#484848] flex flex-col py-[5px] rounded-t-[50px] items-center;
 
     &__header {
       h3 {
@@ -11,13 +11,13 @@
     }
 
     &__contact {
-      @apply flex mt-[20px] mb-[20px];
+      @apply mt-[20px] mb-[20px] flex;
 
       &__item {
         @apply mr-[200px] flex flex-col items-center;
 
         img {
-          @apply w-[40px] h-[40px] mb-[5px];
+          @apply w-[40px] h-[40px] mb-[5px] flex-col;
         }
 
         &:last-child {
@@ -28,6 +28,6 @@
   }
 
   .reserved {
-    @apply bg-[#232323] flex justify-center py-[5px];
+    @apply bg-[#232323] justify-center py-[5px] flex;
   }
 }

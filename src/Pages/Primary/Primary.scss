@@ -1,5 +1,5 @@
 .primary {
-  @apply flex font-interReg relative h-full ml-[80px];
+  @apply flex font-interReg relative ml-[80px] h-full;
 
   &__info {
     @apply w-full bg-white;
@@ -7,7 +7,7 @@
     max-height: 100vh;
 
     .cover {
-      @apply w-full h-[200px] bg-[#E9E9E9];
+      @apply h-[200px] bg-[#E9E9E9] w-full;
 
       &__button {
         @apply w-full h-full flex justify-center items-center;
@@ -18,7 +18,7 @@
         }
 
         &__nanImage {
-          @apply w-[90px];
+          @apply w-[90px] flex-col;
         }
       }
     }
@@ -27,8 +27,8 @@
       @apply flex justify-around h-[100px] items-center;
 
       &__avatar {
-        @apply translate-y-[-50px] w-[100px] h-[100px] bg-[#E9E9E9];
-        @apply border-[5px] border-solid border-white;
+        @apply translate-y-[-50px] w-[100px] h-[100px] bg-[#E9E9E9] border-white;
+        @apply border-[5px] border-solid;
         @apply flex justify-center items-center;
         border-radius: 50%;
 
@@ -38,7 +38,7 @@
           overflow: hidden;
 
           &__nanImage {
-            @apply w-[60px];
+            @apply w-[60px] flex-col;
           }
 
           &__image {
@@ -57,7 +57,7 @@
       @apply bg-[#f1f5f9] flex justify-around pt-5;
 
       &__settings {
-        @apply w-[360px] ml-[70px] mr-[35px];
+        @apply w-[360px] ml-[70px] mr-[35px] flex-col;
 
         h3 {
           @apply text-center;

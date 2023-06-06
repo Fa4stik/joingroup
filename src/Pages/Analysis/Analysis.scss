@@ -1,8 +1,8 @@
 .analysis {
-  @apply flex ml-[80px];
+  @apply ml-[80px] flex;
 
   .graph {
-    @apply w-screen h-full bg-[#f1f5f9];
+    @apply w-screen bg-[#f1f5f9] h-full;
 
     &__count__post {
       @apply m-5 bg-[#ebeef2] w-[650px] p-5 shadow-button;
@@ -16,14 +16,14 @@
         }
 
         &__buttons {
-          @apply font-interReg bg-[#d9d9d9] p-1 h-[35px];
+          @apply font-interReg bg-[#d9d9d9] h-[35px] p-1;
           border-radius: 10px;
 
           button {
             @apply py-[1px] px-3;
             border-radius: 10px;
             &:hover {
-              @apply bg-[#efefef];
+              @apply bg-[#efefef] flex flex-col;
             }
 
             &:first-of-type {
@@ -40,7 +40,7 @@
         }
 
         &__dialog {
-          @apply h-[300px] w-[700px];
+          @apply h-[300px] w-[700px] flex flex-col;
         }
       }
     }
@@ -57,14 +57,14 @@
         }
 
         &__buttons {
-          @apply font-interReg bg-[#d9d9d9] p-1 h-[35px];
+          @apply font-interReg bg-[#d9d9d9] h-[35px] p-1;
           border-radius: 10px;
 
           button {
             @apply py-[1px] px-3;
             border-radius: 10px;
             &:hover {
-              @apply bg-[#efefef];
+              @apply bg-[#efefef] flex flex-col;
             }
 
             &:first-of-type {
@@ -81,7 +81,7 @@
         }
 
         &__dialog {
-          @apply h-[300px] w-[700px];
+          @apply h-[300px] w-[700px] flex flex-col;
         }
       }
     }

@@ -10,6 +10,6 @@
   }
 
   img {
-    @apply h-[20px] translate-x-[245px] -translate-y-[28px];
+    @apply h-[20px] translate-x-[245px] -translate-y-[28px] flex-col;
   }
 }

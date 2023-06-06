@@ -1,9 +1,9 @@
 .myButton {
-  @apply w-full bg-[#5280FF] py-[10px] my-[40px];
+  @apply bg-[#5280FF] py-[10px] my-[40px] w-full;
   @apply font-interBold text-white;
 
   &:hover {
-    @apply bg-[#648DFF];
+    @apply bg-[#648DFF] flex-col;
   }
 
 }

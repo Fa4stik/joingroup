@@ -3,7 +3,7 @@ $input-padding-y: 50px;
 
 .myInput {
   @apply border-b-[#{$input-border-bottom}] border-b-[#C6C6C6] pb-[10px] w-full text-black;
-  @apply bg-no-repeat font-interReg mb-[40px] pr-[35px];
+  @apply font-interReg mb-[40px] pr-[35px] bg-no-repeat;
   display: inline;
   background-position: right top;
   background-size: 30px 30px;

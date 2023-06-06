@@ -7,7 +7,7 @@ $text-color-link: #5280FF;
   background-position-y: -50px;
 
   .block {
-    @apply w-[480px] bg-white shadow-button px-[40px] py-[30px];
+    @apply w-[480px] shadow-button px-[40px] py-[30px] bg-white;
     @apply flex flex-col justify-center items-center;
     @apply font-interReg;
 
@@ -20,7 +20,7 @@ $text-color-link: #5280FF;
     }
 
     a {
-      @apply text-[#{$text-color-link}];
+      @apply text-[#{$text-color-link}] flex-col;
     }
 
     &__passFunc {
@@ -29,7 +29,7 @@ $text-color-link: #5280FF;
         @apply flex items-center;
 
         input {
-          @apply w-[15px] h-[15px]
+          @apply w-[15px] h-[15px] flex-col;
         }
 
         p {
@@ -43,7 +43,7 @@ $text-color-link: #5280FF;
     }
 
     &__passwordBtn {
-      @apply h-[30px] w-[30px] translate-x-[185px] -translate-y-[79px];
+      @apply h-[30px] w-[30px] translate-x-[185px] -translate-y-[79px] flex-col;
       @apply -mb-5;
     }
 

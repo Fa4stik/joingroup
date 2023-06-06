@@ -9,11 +9,11 @@ body {
     @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[767px] w-full leading-[1.4] text-center;
 
     &-404 {
-      @apply relative h-[180px] mb-[20px] z-[-1];
+      @apply h-[180px] mb-[20px] z-[-1] relative;
 
       h1 {
-        @apply absolute text-[224px] text-center uppercase font-[900];
-        @apply left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-0 mb-0 ml-[-12px] tracking-[-20px];
+        @apply absolute text-[224px] text-center font-[900] uppercase;
+        @apply left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 mt-0 mb-0 ml-[-12px] tracking-[-20px] transform;
         font-family: montserrat, sans-serif;
         text-shadow: -1px -1px 0 #8400ff, 1px 1px 0 #ff005a;
       }
@@ -26,13 +26,13 @@ body {
     }
 
     a {
-      @apply inline-block uppercase text-[#ff005a] decoration-0 bg-transparent px-[40px] py-[10px] text-[14px] font-[700];
+      @apply inline-block text-[#ff005a] decoration-0 bg-transparent px-[40px] py-[10px] text-[14px] font-[700] uppercase;
       font-family: montserrat, sans-serif;
       border: 2px solid;
       transition: .2s all;
 
       &:hover {
-        @apply text-[#8400ff]
+        @apply text-[#8400ff] flex-col;
       }
     }
   }
@@ -40,12 +40,12 @@ body {
 
 @media only screen and (max-width: 767px) {
   .notfound .notfound-404 h2 {
-    @apply text-[24px];
+    @apply text-[24px] flex-col;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .notfound .notfound-404 h1 {
-    @apply text-[182px];
+    @apply text-[182px] flex-col;
   }
 }

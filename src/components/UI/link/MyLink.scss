@@ -8,7 +8,7 @@
     }
 
     &:hover:not(:first-of-type) img {
-      @apply bg-[#EDECFC] bg-[20px] rounded-[10px];
+      @apply bg-[#EDECFC] bg-[20px] rounded-[10px] flex-col;
     }
 
     &:last-of-type {
