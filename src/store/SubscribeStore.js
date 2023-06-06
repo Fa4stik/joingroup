@@ -25,11 +25,11 @@ export default class SubscribeStore {
     async getSubscribeById(id) {
         try {
             const response = await SubscribeService.getSubscribeById(id);
-            console.log(response);
+            // console.log(response);
             this.setId(response.data.id);
             this.setName(response.data.name);
             this.setTimeOfActionDay(response.data.timeofactionday);
-            return response;
+            return response.data;
         } catch (e) {
             console.log(e);
         }

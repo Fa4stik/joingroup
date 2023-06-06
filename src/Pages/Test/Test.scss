@@ -1,32 +1,37 @@
-//body {
-//  cursor: none;
+//.group__post {
+//  &__checked {
+//    .toggle {
+//      border-color: #654fec;
+//
+//      &:after {
+//        background: #5445bb;
+//        transform: translateX(20px);
+//      }
+//    }
+//  }
 //}
 //
-//.cursor {
-//  position: absolute;
-//  width: 40px;
-//  height: 40px;
-//  background-color: transparent;
-//  border: 2px solid #000;
-//  border-radius: 50%;
-//  pointer-events: none;
-//  transform: translate(-50%, -50%);
-//  transition: top 0.10s ease, left 0.10s ease; /* Add this line */
+//.toggle {
+//  appearance: none;
+//  cursor: pointer;
+//  height: 32px;
+//  width: 52px;
+//  border-radius: 16px;
+//  position: relative;
+//  border: 2px solid #474755;
+//  background: linear-gradient(180deg, #ebebef 0%, #dcdee3 100%);
+//  transition: all 0.2s ease;
+//
+//  &:after {
+//    content: '';
+//    position: absolute;
+//    top: 2px;
+//    left: 2px;
+//    width: 24px;
+//    height: 24px;
+//    border-radius: 50%;
+//    background: #969494;
+//    box-shadow: 0 1px 2px rgba(44, 44, 44, 0.2);
+//    transition: all 0.2s cubic-bezier(0.5, 0.1, 0.75, 1.35);
+//  }
 //}
-
-.check {
-  @apply w-screen h-screen;
-  @apply flex flex-wrap;
-
-  &__item {
-    @apply w-[200px] h-[200px] bg-red-400 m-5;
-  }
-
-  input {
-    border: solid 2px black;
-  }
-
-  button {
-    border: solid 2px black;
-  }
-}

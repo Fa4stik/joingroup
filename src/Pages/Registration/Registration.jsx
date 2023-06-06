@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useEffect, useRef, useState} from 'react';
 import './Registration.scss'
 import {register} from '../../images/images.js'
 import MyInput from "../../components/UI/input/MyInput";
@@ -6,6 +6,7 @@ import MyButton from "../../components/UI/button/MyButton";
 import {useNavigate} from "react-router-dom";
 import {AuthContext, MyHeaderContext} from "../../context";
 import {observer} from "mobx-react-lite";
+import BlockNotification from "../../components/BlockNotification/BlockNotification";
 
 const Registration = () => {
     const [buttonTextLogin, setButtonTextLogin] = useState('Вход');
@@ -17,6 +18,9 @@ const Registration = () => {
     const [isCorrectData, setIsCorrectData] = useState('none');
     const [errorText, setErrorText] = useState('');
 
+    const [notification, setNotification] = useState({isNotification: false, message: ''});
+    const timeoutId = useRef(null);
+
     const [name, setName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
@@ -25,7 +29,7 @@ const Registration = () => {
     const [title, setTitle] = useState('Авторизация');
     const [dispPassword, setDispPassword] = useState('')
 
-    const { store } = useContext(AuthContext);
+    const { authStore } = useContext(AuthContext);
 
     const navigate = useNavigate();
     const handlerLink = () => {
@@ -62,26 +66,47 @@ const Registration = () => {
         }
     }
 
+    const handleNotification = (message) => {
+        if (timeoutId.current) {
+            clearTimeout(timeoutId.current);
+        }
+
+        setNotification({ isNotification: true, message: message });
+        timeoutId.current = setTimeout(() => {
+            setNotification({ isNotification: false, message: '' });
+        }, 5000);
+    }
+
     const handlerBtnLogin = async (e) => {
         e.preventDefault();
         if (buttonTextLogin === 'Вход') {
-            const response = await store.login(email, password)
-            if (store.isAuth) {
+            const response = await authStore.login(email, password)
+            if (authStore.isAuth) {
                 setIsCorrectData('none')
                 navigate('/primary')
             } else {
-                setErrorText(response);
-                setIsCorrectData('block')
+                handleNotification(response);
+                // setErrorText(response);
+                // setIsCorrectData('block')
             }
-        } else {
-            const response = await store.registration(name, lastName, email, password);
-            if (store.isAuth) {
+        } else if (buttonTextLogin === 'Регистрация') {
+            const response = await authStore.registration(name, lastName, email, password);
+            if (authStore.isAuth) {
                 setIsCorrectData('none');
                 navigate('/primary');
             } else {
-                setErrorText(response);
-                setIsCorrectData('block');
+                handleNotification(response);
+                // setErrorText(response);
+                // setIsCorrectData('block');
             }
+        } else if (buttonTextLogin === 'Отправить письмо') {
+            try {
+                const response = await authStore.resetPassword(email);
+                handleNotification(response.data)
+            } catch (e) {
+                handleNotification(e.response?.data?.message)
+            }
+
         }
         // navigate('/primary')
     }
@@ -153,6 +178,9 @@ const Registration = () => {
                     <p>{pTextLogin} <a href="#" onClick={handlerLink}>{linkTextLogin}</a></p>
                 </div>
             </div>
+            {notification.isNotification &&
+                <BlockNotification message={notification.message} timeout={5000}/>
+            }
         </div>
     );
 };

@@ -9,13 +9,13 @@ const PostItem = ({post, ...props}) => {
             <div className="group__post__item__header">
                 <img src={primary.avatar} alt="Avatar"/>
                 <div className="group__post__item__header__info">
-                    <span>Имя Фамилия</span>
+                    <span>{post.owner}</span>
                     <p>{post.publication}</p>
                 </div>
                 <div className="group__post__item__header__mess">
-                    <MyTag>VK</MyTag>
-                    <MyTag>INSTAGRAM</MyTag>
-                    <MyTag>TG</MyTag>
+                    {post.isIg && <MyTag>INSTA</MyTag>}
+                    {post.isVk && <MyTag>VK</MyTag>}
+                    {post.isTg && <MyTag>TG</MyTag>}
                 </div>
             </div>
             <div className="group__post__item__desc">
@@ -30,11 +30,11 @@ const PostItem = ({post, ...props}) => {
             }
             <div className="group__post__item__statistic">
                 <img src={primary.like} alt="Like"/>
-                <p>1050</p>
+                <p>{post.like}</p>
                 <img src={primary.comment} alt="Comment"/>
-                <p>75</p>
+                <p>{post.comment}</p>
                 <img src={primary.share} alt="Share"/>
-                <p>30</p>
+                <p>{post.share}</p>
             </div>
         </div>
     );

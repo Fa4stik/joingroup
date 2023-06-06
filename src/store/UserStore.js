@@ -9,11 +9,15 @@ export default class UserStore {
     avatar;
     tokentg;
     tokenvk;
-    tokeninst;
+    loginig;
+    passig;
     idsubscribe;
     timestartsubscribe;
     isactivated;
     activationlink;
+    domainvk;
+    domaintg;
+
 
     constructor() {
         makeAutoObservable(this);
@@ -47,8 +51,12 @@ export default class UserStore {
         this.tokenvk = token;
     }
 
-    setTokenInst(token) {
-        this.tokeninst = token;
+    setLoginIg(loginig) {
+        this.loginig = loginig;
+    }
+
+    setPassIg(passig) {
+        this.passig = passig;
     }
 
     setIdSubscribe(id) {
@@ -67,10 +75,17 @@ export default class UserStore {
         this.activationlink = link;
     }
 
+    setDomainVk(domainvk) {
+        this.domainvk = domainvk;
+    }
+
+    setDomainTg(domaintg) {
+        this.domaintg = domaintg;
+    }
+
     async getUserById(id) {
         try {
             const response = await UserServices.getUserById(id);
-            console.log(response)
             this.setId(response.data.id);
             this.setName(response.data.name);
             this.setLastName(response.data.lastname);
@@ -78,10 +93,13 @@ export default class UserStore {
             this.setAvatar(response.data.avatar);
             this.setTokenTg(response.data.tokentg);
             this.setTokenVk(response.data.tokenvk);
-            this.setTokenInst(response.data.tokeninst);
+            this.setLoginIg(response.data.loginig);
+            this.setPassIg(response.data.passig);
             this.setIdSubscribe(response.data.idsubscribe);
             this.setTimeStartSubscribe(response.data.timesrtartsubscribe);
             this.setIsActivated(response.data.isactivated);
+            this.setDomainVk(response.data.domainvk);
+            this.setDomainTg(response.data.domaintg);
         } catch (e) {
             console.log(e)
         }
@@ -91,7 +109,7 @@ export default class UserStore {
         try {
             const {id, ...field} = user;
             const response = await UserServices.updateUser(id, field, avatar);
-            console.log(`UPDATE ${response}`)
+            // console.log(`UPDATE ${response}`)
             this.setId(response.data.id);
             this.setName(response.data.name);
             this.setLastName(response.data.lastname);
@@ -99,10 +117,13 @@ export default class UserStore {
             this.setAvatar(response.data.avatar);
             this.setTokenTg(response.data.tokentg);
             this.setTokenVk(response.data.tokenvk);
-            this.setTokenInst(response.data.tokeninst);
+            this.setLoginIg(response.data.loginig);
+            this.setPassIg(response.data.passig);
             this.setIdSubscribe(response.data.idsubscribe);
             this.setTimeStartSubscribe(response.data.timesrtartsubscribe);
             this.setIsActivated(response.data.isactivated);
+            this.setDomainVk(response.data.domainvk);
+            this.setDomainTg(response.data.domaintg);
         } catch (e) {
             console.log(e);
             return e.response?.data;

@@ -1,6 +1,10 @@
 .group__post {
   &__toggle {
-    @apply mt-2 flex;
+    @apply mt-2 flex mr-3;
+
+    p {
+      @apply mr-2;
+    }
 
     &__item {
       &__checked {
@@ -13,23 +17,6 @@
           }
         }
       }
-    }
-  }
-
-  &__action {
-    @apply flex justify-between items-center mt-4;
-
-    &__download {
-      @apply flex items-center;
-
-      img {
-        @apply w-[30px] mr-4;
-      }
-    }
-
-    &__send {
-      @apply bg-indigo-600 text-white py-1 px-4;
-      border-radius: 20px;
     }
   }
 }

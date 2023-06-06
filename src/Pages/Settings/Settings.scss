@@ -87,7 +87,11 @@
       &__field {
 
         &__item {
-          @apply mb-3 ml-2;
+          @apply mb-3 ml-2 flex;
+
+          &__token {
+            @apply mr-3;
+          }
         }
       }
     }
