@@ -24,10 +24,8 @@ const Primary = () => {
     const [groupInfo, setGroupInfo] = useState({});
 
     useEffect(() => {
-        console.log('USE EFFECT userStore')
-    }, [userStore]);
 
-    console.log('ALL LOAD')
+    }, [userStore]);
 
     useEffect(() => {
         console.log('LOAD POSTS');
@@ -47,8 +45,6 @@ const Primary = () => {
                 storiesCount: msgGroupInfo?.data.storiesCount,
                 videoCount: msgGroupInfo?.data.videoCount,
             })
-
-            console.log(groupInfo);
 
             msgPosts.data.map((post) => {
                 setPosts((prevPosts) => [...prevPosts, {
@@ -136,7 +132,10 @@ const Primary = () => {
                                 onClick={() => document.getElementById('coverImageUpload').click()}
                         >
                             {groupInfo?.cover ?
-                                <img src={URL.createObjectURL(groupInfo.cover)} className="cover__button__image" alt="Cover image"/>
+                                (groupInfo?.cover instanceof Blob ?
+                                    <img src={URL.createObjectURL(groupInfo.cover)} className="cover__button__image" alt="Cover image"/>
+                                    :
+                                    <img src={groupInfo.cover} className="cover__button__image" alt="Cover image"/>)
                                 :
                                 <img src={primary.download} className="cover__button__nanImage" alt="Download"/>
                             }
@@ -154,7 +153,10 @@ const Primary = () => {
                         >
                             <div className="statistic__avatar__circle">
                                 {groupInfo?.avatar ?
-                                    <img src={URL.createObjectURL(groupInfo.avatar)} className="statistic__avatar__circle__image" alt="Download"/>
+                                    (groupInfo?.cover instanceof Blob ?
+                                        <img src={URL.createObjectURL(groupInfo.avatar)} className="statistic__avatar__circle__image" alt="Download"/>
+                                        :
+                                        <img src={groupInfo.avatar} className="statistic__avatar__circle__image" alt="Download"/>)
                                     :
                                     <img src={primary.download} className="statistic__avatar__circle__nanImage"
                                          alt="Download"/>
