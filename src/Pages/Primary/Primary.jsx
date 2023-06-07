@@ -24,8 +24,10 @@ const Primary = () => {
     const [groupInfo, setGroupInfo] = useState({});
 
     useEffect(() => {
-
+        console.log('USE EFFECT userStore')
     }, [userStore]);
+
+    console.log('ALL LOAD')
 
     useEffect(() => {
         console.log('LOAD POSTS');
