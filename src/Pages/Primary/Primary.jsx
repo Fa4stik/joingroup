@@ -28,40 +28,40 @@ const Primary = () => {
     }, [userStore]);
 
     useEffect(() => {
-        // (async () => {
-        //     let msgPosts = await MsgServices.getPosts(userStore);
-        //     let msgGroupInfo = await MsgServices.getGroupInfo(userStore);
-        //
-        //     setGroupInfo({
-        //         name: msgGroupInfo?.data.name,
-        //         avatar: msgGroupInfo?.data.avatar,
-        //         cover: msgGroupInfo?.data.cover,
-        //         site: msgGroupInfo?.data.site,
-        //         address: msgGroupInfo?.data.address,
-        //         description: msgGroupInfo?.data.description,
-        //         membersCount: msgGroupInfo?.data.membersCount,
-        //         postsCount: msgPosts?.data.length,
-        //         storiesCount: msgGroupInfo?.data.storiesCount,
-        //         videoCount: msgGroupInfo?.data.videoCount,
-        //     })
-        //
-        //     console.log(groupInfo);
-        //
-        //     msgPosts.data.map((post) => {
-        //         setPosts((prevPosts) => [...prevPosts, {
-        //             owner: `${post.owner_first} ${post.owner_last}`,
-        //             publication: convertTimestamp(post.date),
-        //             body: post.text,
-        //             isVk: post.vk,
-        //             isTg: post.tg,
-        //             isIg: post.ig,
-        //             img: post.images,
-        //             like: post.likeCount,
-        //             comment: post.commentCount,
-        //             share: post.repostCount
-        //         }]);
-        //     })
-        // })();
+        (async () => {
+            let msgPosts = await MsgServices.getPosts(userStore);
+            let msgGroupInfo = await MsgServices.getGroupInfo(userStore);
+
+            setGroupInfo({
+                name: msgGroupInfo?.data.name,
+                avatar: msgGroupInfo?.data.avatar,
+                cover: msgGroupInfo?.data.cover,
+                site: msgGroupInfo?.data.site,
+                address: msgGroupInfo?.data.address,
+                description: msgGroupInfo?.data.description,
+                membersCount: msgGroupInfo?.data.membersCount,
+                postsCount: msgPosts?.data.length,
+                storiesCount: msgGroupInfo?.data.storiesCount,
+                videoCount: msgGroupInfo?.data.videoCount,
+            })
+
+            console.log(groupInfo);
+
+            msgPosts.data.map((post) => {
+                setPosts((prevPosts) => [...prevPosts, {
+                    owner: `${post.owner_first} ${post.owner_last}`,
+                    publication: convertTimestamp(post.date),
+                    body: post.text,
+                    isVk: post.vk,
+                    isTg: post.tg,
+                    isIg: post.ig,
+                    img: post.images,
+                    like: post.likeCount,
+                    comment: post.commentCount,
+                    share: post.repostCount
+                }]);
+            })
+        })();
     }, [])
 
     const handleDesc = (e) => {
