@@ -24,10 +24,6 @@ const Primary = () => {
     const [groupInfo, setGroupInfo] = useState({});
 
     useEffect(() => {
-
-    }, [userStore]);
-
-    useEffect(() => {
         console.log('LOAD POSTS');
         (async () => {
             let msgPosts = await MsgServices.getPosts(userStore);

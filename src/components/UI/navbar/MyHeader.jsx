@@ -29,14 +29,14 @@ const MyHeader = ({className}) => {
                 onClick={(e) => handleClick(e, 'primary')}
                 image={headerStore.activeLink === 'primary' ? iconBlue.home : iconGray.home}
             />
-            {/*<MyLink*/}
-            {/*    onClick={(e) => handleClick(e, 'userchat')}*/}
-            {/*    image={headerStore.activeLink === 'userchat' ? iconBlue.userChat : iconGray.userChat}*/}
-            {/*/>*/}
-            {/*<MyLink*/}
-            {/*    onClick={(e) => handleClick(e, 'companychat')}*/}
-            {/*    image={headerStore.activeLink === 'companychat' ? iconBlue.compChat : iconGray.compChat}*/}
-            {/*/>*/}
+            <MyLink
+                onClick={(e) => handleClick(e, 'userchat')}
+                image={headerStore.activeLink === 'userchat' ? iconBlue.userChat : iconGray.userChat}
+            />
+            <MyLink
+                onClick={(e) => handleClick(e, 'companychat')}
+                image={headerStore.activeLink === 'companychat' ? iconBlue.compChat : iconGray.compChat}
+            />
             <MyLink
                 onClick={(e) => handleClick(e, 'analysis')}
                 image={headerStore.activeLink === 'analysis' ? iconBlue.analysis : iconGray.analysis}

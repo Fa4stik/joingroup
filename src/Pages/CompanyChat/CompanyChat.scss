@@ -25,6 +25,50 @@
       }
     }
 
+    &__active {
+      @apply flex flex-col h-screen w-full;
+
+      &__header {
+        @apply flex flex-row items-center px-6 py-3;
+        border-bottom: 2px solid #DDE6FF;
+
+        &__logo {
+          @apply h-[60px] mr-3;
+        }
+
+        &__add {
+          @apply h-[30px] ml-auto;
+        }
+
+        p {
+          @apply text-[18px];
+        }
+      }
+
+      &__msgSend {
+        @apply flex flex-col h-full;
+
+        &__messages {
+          @apply overflow-y-auto mt-auto; // h-[567px]
+        }
+
+        &__send {
+          @apply flex flex-row bg-[#f1f5f9] px-6 py-3;
+
+          input {
+            @apply mr-4 rounded-3xl w-full px-3 bg-[#f1f5f9];
+            border: 1px solid black;
+          }
+
+          button {
+            img {
+              @apply h-[35px];
+            }
+          }
+        }
+      }
+    }
+
     &__dialog {
       @apply bg-[#f1f5f9] flex flex-col justify-center items-center text-2xl -mt-20 text-center;
       width: calc(100% - 340px - 80px);

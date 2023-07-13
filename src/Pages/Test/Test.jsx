@@ -2,20 +2,18 @@ import React, { useState } from 'react';
 import './Test.scss';
 
 const MyComponent = () => {
-    const [isChecked, setIsChecked] = useState(true);
-
-    const handleCheckboxChange = () => {
-        setIsChecked(!isChecked);
-    };
-
     return (
-        <div className={`group__post${isChecked ? '__checked' : ''}`}>
-            <input
-                type="checkbox"
-                className="toggle"
-                checked={isChecked}
-                onChange={handleCheckboxChange}
-            />
+        <div className="mainTest">
+            <div className="block1"/>
+            <div className="block2">
+                <div>5</div>
+                <div>5</div>
+                <div>5</div>
+                <div>5</div>
+                <div>5</div>
+                <div>5</div>
+            </div>
+            <div className="block3"/>
         </div>
     );
 };

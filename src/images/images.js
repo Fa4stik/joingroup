@@ -18,6 +18,9 @@ import user_03 from './img/UserChat/user_03.jpg';
 import messGray from './img/UserChat/MessageGray.png';
 
 import comp_01 from './img/CompanyChat/comp_01.jpg';
+import addUser from './img/CompanyChat/addUser.png';
+import createGroup from './img/CompanyChat/createGroup.png';
+import send from './img/CompanyChat/send.png';
 
 import usAvatar from './img/Settings/UserAvatar.png';
 
@@ -50,6 +53,9 @@ export const compChat = {
     usAvatarMain,
     messGray,
     comp_01,
+    addUser,
+    createGroup,
+    send
 }
 
 export const settings = {
