@@ -4,6 +4,8 @@ import {userChat} from "../../images/images";
 import MyTag from "../UI/tag/MyTag";
 
 const OutUser = ({image, fullName, shortText, nameTag, lastTimeMess, ...props}) => {
+    const ruDate = (new Date(lastTimeMess)).toLocaleString('ru-RU');
+    const nwLastTimeMess = `${ruDate.slice(0, 5)} / ${ruDate.slice(11, 17)}`
     return (
         <div className="chat__column__outUsers"
              {...props}
@@ -16,7 +18,7 @@ const OutUser = ({image, fullName, shortText, nameTag, lastTimeMess, ...props}) 
                     {nameTag ? <MyTag>{nameTag}</MyTag> : null}
                 </div>
             </div>
-            <p>{lastTimeMess}</p>
+            <p>{nwLastTimeMess}</p>
         </div>
     );
 };

@@ -1,0 +1,21 @@
+.chat__active__messages {
+  &__recipient {
+    @apply flex items-start mb-5;
+
+    img {
+      @apply h-[35px] mr-3 mt-6;
+    }
+
+    &__parcel {
+      @apply flex flex-col;
+
+      p {
+        @apply text-[#BCBCBC] font-interBold text-[15px];
+      }
+
+      div {
+        @apply bg-[#BCBCBC] text-white mt-[2px] text-[15px] px-2 py-1 rounded-lg max-w-[500px];
+      }
+    }
+  }
+}

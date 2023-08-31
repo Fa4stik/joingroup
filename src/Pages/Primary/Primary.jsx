@@ -218,7 +218,7 @@ const Primary = () => {
                         </div>
                         <div className="group__post">
                             <CreatePost posts={posts} setPosts={setPosts}/>
-                            {posts.map((post, index) => <PostItem post={post} key={index + 1}/>
+                            {posts.map((post) => <PostItem post={post} key={post.id}/>
                             )}
                         </div>
                     </div>

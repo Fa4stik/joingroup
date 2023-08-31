@@ -5,7 +5,7 @@
     @apply flex font-interReg w-screen;
 
     &__column {
-      @apply w-[420px] h-screen;
+      @apply w-[550px] h-screen;
       border-right: 3px solid #DDE6FF;
 
       &__mainUserInfo {
@@ -45,25 +45,21 @@
         }
       }
 
-      &__msgSend {
-        @apply flex flex-col h-full;
+      &__messages {
+        @apply overflow-y-auto mt-auto px-6 pt-4;
+      }
 
-        &__messages {
-          @apply overflow-y-auto mt-auto; // h-[567px]
+      &__send {
+        @apply flex flex-row bg-[#f1f5f9] px-6 py-3;
+
+        input {
+          @apply mr-4 rounded-3xl w-full px-3 bg-[#f1f5f9];
+          border: 1px solid black;
         }
 
-        &__send {
-          @apply flex flex-row bg-[#f1f5f9] px-6 py-3;
-
-          input {
-            @apply mr-4 rounded-3xl w-full px-3 bg-[#f1f5f9];
-            border: 1px solid black;
-          }
-
-          button {
-            img {
-              @apply h-[35px];
-            }
+        button {
+          img {
+            @apply h-[35px];
           }
         }
       }

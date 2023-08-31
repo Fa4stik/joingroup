@@ -17,10 +17,15 @@ export default class UserStore {
     activationlink;
     domainvk;
     domaintg;
+    company_id;
 
 
     constructor() {
         makeAutoObservable(this);
+    }
+
+    setCompanyId(companyId) {
+        this.company_id = companyId
     }
 
     setId(id) {
@@ -100,6 +105,7 @@ export default class UserStore {
             this.setIsActivated(response.data.isactivated);
             this.setDomainVk(response.data.domainvk);
             this.setDomainTg(response.data.domaintg);
+            this.setCompanyId(response.data.company_id);
         } catch (e) {
             console.log(e)
         }
@@ -124,6 +130,7 @@ export default class UserStore {
             this.setIsActivated(response.data.isactivated);
             this.setDomainVk(response.data.domainvk);
             this.setDomainTg(response.data.domaintg);
+            this.setCompanyId(response.data.company_id)
         } catch (e) {
             console.log(e);
             return e.response?.data;

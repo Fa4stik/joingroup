@@ -4,7 +4,7 @@
   .chat {
     @apply flex font-interReg w-screen;
     &__column {
-      @apply w-[420px] h-screen;
+      @apply w-[620px] h-screen;
       border-right: 3px solid #DDE6FF;
 
       &__mainUserInfo {
@@ -22,11 +22,57 @@
       &__inputSearch {
         @apply mb-4 pl-8;
       }
+
+      &__chats {
+        @apply h-[572px] overflow-y-auto;
+      }
     }
 
     &__dialog {
       @apply bg-[#f1f5f9] flex flex-col justify-center items-center text-2xl -mt-20 text-center;
       width: calc(100% - 340px - 80px);
+    }
+
+    &__active {
+      @apply flex flex-col w-full;
+
+      &__header {
+        @apply flex w-full items-center px-6 py-4;
+        border-bottom: 3px solid #DDE6FF;
+
+        img {
+          @apply w-[70px] rounded-full mr-3;
+        }
+
+        &__info {
+          h4 {
+            @apply text-[23px];
+          }
+        }
+      }
+
+      &__messSend {
+        @apply flex flex-col justify-end h-full;
+
+        &__messages {
+          @apply px-6 pt-4 h-[548px] overflow-y-auto;
+        }
+
+        &__send {
+          @apply flex flex-row bg-[#f1f5f9] px-6 py-3;
+
+          input {
+            @apply mr-4 rounded-3xl w-full px-3 bg-[#f1f5f9];
+            border: 1px solid black;
+          }
+
+          button {
+            img {
+              @apply h-[35px];
+            }
+          }
+        }
+      }
     }
   }
 }

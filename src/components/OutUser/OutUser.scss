@@ -1,15 +1,19 @@
 .chat__column__outUsers {
-  @apply flex items-start py-3 pl-8;
+  @apply flex items-start py-3 px-3;
   border-top: 3px solid #DDE6FF;
 
   &__info {
-    @apply flex items-center mr-12;
+    @apply flex items-center;
 
     &__text {
       p {
         @apply text-[#828282] flex-col;
       }
     }
+  }
+
+  p {
+    @apply ml-auto;
   }
 
   img {
